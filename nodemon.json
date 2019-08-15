@@ -1,6 +1,6 @@
 {
     "env":
     {
-        "MONGO_ATLAS_PW":'<Atlas User Password>'
+        "MONGO_ATLAS_PW":"<Atlas User Password>"
     }
 }
