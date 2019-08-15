@@ -1,0 +1,39 @@
+<div class="container" >
+<div class="card">
+        <h2 style="text-align: center; padding:20px">Product Add</h2>
+        <div>
+            <div class="form-group">
+          <label>
+            <input [(ngModel)]="productData.prod_name" placeholder="Product Name"/>
+          </label>
+          </div><br>
+          <div class="form-group">
+          <label>
+            <input [(ngModel)]="productData.prod_desc" placeholder="Product Description"/>
+          </label>
+          </div><br>
+          <div class="form-group">
+          <label>
+            <input [(ngModel)]="productData.prod_price" placeholder="Product Price"/>
+          </label>
+          </div>
+            <div class="container">
+              <div class="avatar-upload">
+                  <div class="avatar-edit">
+                      <input  #imageInput type='file' id="imageUpload" accept="image/*"
+                      (change)="processFile(imageInput)"/>
+                      <label for="imageUpload"></label>
+                  </div>
+                  <div class="avatar-preview">
+                      <div id="imagePreview" *ngIf="selectedFile" [ngStyle]="{'background-image': 'url('+ selectedFile.src + ')'}">
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div>
+        <button  class="btn btn-success btn-lg" (click)="addProduct()">Save</button>
+      </div>
+</div>
+</div>
+</div>
+
